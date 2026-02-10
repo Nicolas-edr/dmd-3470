@@ -36,7 +36,7 @@ h2 {
 }
 
 p {
-  font-size: 1.6em;
+  font-size: 1.8em;
   width: 85%;
   margin-left: 100px;
 }
@@ -49,6 +49,7 @@ img {
 
 ul {
   list-style-type: numbers;
+  font-size: larger;
 
 }
 
