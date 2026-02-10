@@ -1,0 +1,59 @@
+@media (min-width: 321px) {
+  .row {
+    display: flex;
+  }
+}
+
+header{
+  font-size: 1.7em;
+  text-align: center;
+  color: black;
+  background-color: thistle;
+  width: 100%;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+  color: black;
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+  color: black;
+}
+
+.row-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+p {
+  font-size: 1.6em;
+  width: 85%;
+  margin-left: 100px;
+}
+
+img {
+  width: 500px;
+  height: auto;
+  margin-right: 100px;
+}
+
+ul {
+  list-style-type: numbers;
+
+}
+
+li {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  margin-left: 100px;
+}
