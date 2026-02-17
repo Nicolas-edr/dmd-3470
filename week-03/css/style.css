@@ -1,0 +1,43 @@
+@media (max-width: 321px){
+  body {
+    display: grid;
+}
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border:solid 1px black;
+  width:auto;
+  height: 700px;
+
+}
+
+.col-1 {
+  width: 60%;
+  border:solid 1px black;
+}
+
+.col-2 {
+  width: 40%;
+  border:solid 1px black;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.btn-2 {
+  background-color: transparent;
+  color: #007bff;
+  padding: 10px 20px;
+  border: 2px solid #007bff;
+  border-radius: 12px;
+  cursor: pointer;
+}
