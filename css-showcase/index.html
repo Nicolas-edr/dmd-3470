@@ -1,0 +1,183 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Position Sticky</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+    <section class="head">
+      <div class="title">
+        <h1>Position: Sticky</h1>
+        <br>
+        <p><i>This Header is an example of position: sticky</i></p>
+      </div>
+    </section>
+
+  
+  <main>
+
+    <section class="intro">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-8 offset-2 justify-content-center text-center"  style="margin-top:30px;">
+          
+          <h4>A demonstration of CSS position: sticky, and overview of other positioning properties.</h4>
+          <p>By: Nicolas Rodriguez</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<br>
+    <section class="overview">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div>
+        <h2>General Overview</h2>
+        <p>The position property in CSS controls how an element is positioned within the page. With physical properties like top, right, bottom, and left, you can control where an element, or header, is positioned on a page. Positioning is comprosed of 5 values: static, relative, absolute, fixed, and sticky. </p>
+        </div>
+      </div>
+      </div>
+    </section>
+    <hr>
+
+    <section class="cards">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-6 col-lg-6 col-xl-6">
+          <div class="card-mb-5">
+            <div class="card-body">
+            <h3>Static</h3>
+            <p>The default position for all elements. The inclusion of the top, right, bottom, and left properties have no effect on static elements. This is a position according the the <strong>normal flow</strong> of the document.</p>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-6 col-xl-6">
+          <div class="card-mb-5">
+            <div class="card-body">
+            <h3>Relative</h3>
+            <p>Positoned in accordance to the normal flow of the document but can be offset using top, right, bottom, and left properties. Like the property name, this offset if <i>relative</i> to itself. Relative positioning does not affect the position of other elemtnets and the spacing for th element in the layout is the same as if it were static.</p>
+            </div>
+          </div>
+          </div>
+      
+
+          <div class="col-sm-6 col-lg-6 col-xl-6">
+          <div class="card-mb-5">
+            <div class="card-body">
+            <h3>Absolute</h3>
+            <p>An element with absolute positioning is removed from the normal flow of the document. It is instead positioned relative to its nearest positioned ancestor, if applicable, or relative to the intial contianing block. When this positioning is use,d there is no space created for the element in the normal page layout. The final position is detemrined by the top, right, bottom, and left properties.</p>
+          </div>
+          </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-6 col-xl-6">
+          <div class="card-mb-5">
+            <div class="card-body">
+            <h3>Fixed</h3>
+            <p>An element with fixed positioning is removed from the normal flow of the document and there is no space created for it in the page layout. THis element is positioned relative to the viewport, with th efinal position detemrined by the top, right, bottom, and left properties.</p>
+          </div>
+          </div>
+          </div>
+          
+          <div class="col-sm-6 col-lg-6 col-xl-12">
+          <div class="card-mb-3">
+            <div class="card-body">
+            <h3>Sticky</h3>
+            <p>When an element uses <strong>position: sticky</strong>, the element is in accordance to the normal flow of the document, then offset. The relative position is determined by the top, right, bottom, and left properties, and relative to the nearest scrolling ancestor. All other elements are not affected by the sticky positioning. This element stays in place, such as a header that remains at the top of the page while scrolling.</p>
+          </div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+    <section class="img" style="margin-top: 60px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 d-flex" style="margin-right: 15px;">
+      <img src="img/Screenshot 2026-03-07 145731.png" alt="Example of Sticky Positioning CSS Code">
+      <div class="col-xl-6 d-flex justify-content-center flex-column" style="margin-left: 30px;">
+      <h3>Code Representation</h3>
+      <p>The <strong>Top</strong> element sets the Position at 0 or at the top of the viewport, lined up with the window.</p>
+      <p>The <strong>Z-index</strong> property controls the stacking order of elements. Having a higher z-index value of 1000 ensures that the header will be the element on top of others on the page.</p>
+      </div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+  <section class="img" style="margin-top: 60px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 d-flex flex-row-reverse" style="margin-right: 15px;">
+
+        <img src="img/Screenshot 2026-03-08 170911.png" alt="Example of Sticky Positioning CSS Code" style="width:50%; height:auto;">
+
+        <div class="col-xl-6 d-flex justify-content-center flex-column" style="margin-right: 30px;">
+          <h3>Code Representation</h3>
+          <p>The <strong>Bottom</strong> element sets the Position at 760px above the bottom of the viewport. This then stays in a constant position as the user scrolls, at 760 px above the bottom of the page.</p>
+          <p>The <strong>Z-index</strong> property controls the stacking order of elements. Having a higher z-index value of 1000 ensures that the header will be the element on top of others on the page.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="music">
+      <div class="container">
+  
+        <div class="row">
+  
+          <div class="note">
+            <img src="img/staff.png" alt="Musical Staff">
+            <img src="img/quater.png" alt="Quarter Note">
+          </div>
+        </div>
+      </div>
+  
+    </section>
+
+    <section class="music-2">
+      <div class="container">
+  
+        <div class="row">
+  
+          <div class="note-2">
+            <img src="img/staff.png" alt="Musical Staff">
+            <img src="img/quater.png" alt="Quarter Note">
+          </div>
+        </div>
+      </div>
+  
+    </section>
+  </main>
+  
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
