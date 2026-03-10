@@ -87,11 +87,12 @@ textarea {
 main {
   max-width: auto;
   padding: 0 10px;
-  background-color: rgba(241, 216, 254, 0.44);
+  background: linear-gradient(145deg, rgb(61, 14, 101) 0%, rgb(77, 80, 100) 90%);
 }
 
  p, h1, h2, h3, h4, h5, h6 {
   text-align: center;
+  color:#fff;
 }
 
 p {
@@ -103,9 +104,10 @@ p {
   display: flex;
   flex-direction: row;
   gap:50px;
-  border: 1px solid #ccc;
+  
   margin-top: 20px;
-  background-color: rgba(188, 217, 217, 0.44);
+  background-color: rgb(42, 66, 97);
+  box-shadow:  0 4px 8px rgba(0, 0, 0, 0.45);
 }
 
 .card-body h3 {
@@ -117,6 +119,7 @@ p {
   margin-left: 40px;
   position: sticky;
   top: 165px;  
+  color:floralwhite
 }
 
 
@@ -132,9 +135,14 @@ p {
 .head {
   position: sticky;
   top: 0;
-  background: cadetblue;
+  background: linear-gradient(100deg, rgba(186, 112, 251, 1) 0%, rgba(145, 170, 260, 1) 50%, rgba(159, 168, 248, 1) 100%);
   z-index: 1000;
   padding: 10px 0;
+}
+
+img {
+  border: 1px solid #78767d;
+  box-shadow:  0 4px 8px rgba(0, 0, 0, 0.45);
 }
 
 
