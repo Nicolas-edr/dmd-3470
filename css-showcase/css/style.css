@@ -87,8 +87,16 @@ textarea {
 main {
   max-width: auto;
   padding: 0 10px;
-  background: linear-gradient(145deg, rgb(61, 14, 101) 0%, rgb(77, 80, 100) 90%);
+  background: linear-gradient(145deg, rgb(84, 39, 123) 0%, rgb(65, 41, 75) 50%);
 }
+
+hr {
+  height: 5px; 
+  background-color: black; 
+  border: none; 
+  width: auto;
+}
+
 
  p, h1, h2, h3, h4, h5, h6 {
   text-align: center;
@@ -118,7 +126,7 @@ p {
   margin-top: 30px;
   margin-left: 40px;
   position: sticky;
-  top: 165px;  
+  top: 158px;  
   color:floralwhite
 }
 
@@ -137,13 +145,14 @@ p {
   top: 0;
   background: linear-gradient(100deg, rgba(186, 112, 251, 1) 0%, rgba(145, 170, 260, 1) 50%, rgba(159, 168, 248, 1) 100%);
   z-index: 1000;
-  padding: 10px 0;
+  padding: 3px 0;
 }
 
 img {
   border: 1px solid #78767d;
   box-shadow:  0 4px 8px rgba(0, 0, 0, 0.45);
 }
+
 
 
 
