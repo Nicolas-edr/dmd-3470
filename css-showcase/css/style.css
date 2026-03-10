@@ -87,7 +87,7 @@ textarea {
 main {
   max-width: auto;
   padding: 0 10px;
-  background-color: rgba(222, 188, 250, 0.44);
+  background-color: rgba(241, 216, 254, 0.44);
 }
 
  p, h1, h2, h3, h4, h5, h6 {
@@ -95,19 +95,37 @@ main {
 }
 
 p {
-  font-size: large;
+  font-size: 1.7em;
 }
 
 .card-body {
-  
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center;     
-  height: 300px;           
+  flex-direction: row;
+  gap:50px;
   border: 1px solid #ccc;
   margin-top: 20px;
   background-color: rgba(188, 217, 217, 0.44);
+}
+
+.card-body h3 {
+  align-self: flex-start;   
+  width: fit-content;       
+  height: fit-content;  
+  font-size: 2em;
+  margin-top: 30px;
+  margin-left: 40px;
+  position: sticky;
+  top: 165px;  
+}
+
+
+.card-body p{
+  font-size: 1.7em;
+  margin-right: 40px;
+  margin-left:30px;
+  margin-top:30px;
+  padding: 10px;
 }
 
 
@@ -119,53 +137,11 @@ p {
   padding: 10px 0;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
 
-.note img {
-  width: 8%;
-  height: auto;
-  padding:0 30px;
-  margin-right: 0 20px;
-}
 
-.note {
-  display: flex;
-  align-items: left;
-  justify-content: left;
-  margin-top: 20px;
-}
 
-.music {
-  position: sticky;
-  bottom:760px;
-  z-index: 1000;
-  padding: 10px 0;
-}
 
-.note-2{
-  display: flex;
-  align-items: right;
-  justify-content: right;
-  margin-top: 20px;
-}
 
-.note-2 img {
-  width: 8%;
-  height: auto;
-  padding:0 30px;
-  margin-right: 0 20px;
-}
-
-.music-2 {
-  position: sticky;
-  bottom:760px;
-  z-index: 1000;
-  padding: 10px 0;
-
-}
 
 
 
