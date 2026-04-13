@@ -1,0 +1,276 @@
+
+<h2 class="sr-only">Brand24 antisemitism sentiment analysis with focus on 18-24 demographic reach, April 2026</h2>
+
+<style>
+  .dash { font-family: var(--font-sans); padding: 1rem 0; }
+  .section-label { font-size: 11px; font-weight: 500; color: var(--color-text-tertiary); letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 6px; }
+  .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 1.5rem; }
+  .metric { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; }
+  .metric-val { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin: 0; }
+  .metric-lbl { font-size: 12px; color: var(--color-text-secondary); margin: 2px 0 0; }
+  .metric-sub { font-size: 11px; color: var(--color-text-tertiary); margin: 2px 0 0; }
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 1rem; }
+  .card-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 12px; }
+  .insight-row { display: flex; gap: 8px; margin-bottom: 8px; align-items: flex-start; }
+  .insight-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+  .insight-text { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+  .badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: var(--border-radius-md); margin: 2px 2px 2px 0; }
+  .badge-red { background: #FCEBEB; color: #791F1F; }
+  .badge-amber { background: #FAEEDA; color: #633806; }
+  .badge-blue { background: #E6F1FB; color: #0C447C; }
+  .badge-teal { background: #E1F5EE; color: #085041; }
+  .badge-gray { background: #F1EFE8; color: #444441; }
+  .platform-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; }
+  .platform-name { font-size: 12px; color: var(--color-text-secondary); width: 100px; flex-shrink: 0; }
+  .bar-track { flex: 1; height: 8px; background: var(--color-background-secondary); border-radius: 4px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; }
+  .bar-val { font-size: 12px; color: var(--color-text-secondary); width: 50px; text-align: right; flex-shrink: 0; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 520px) { .two-col { grid-template-columns: 1fr; } }
+  .hashtag-chip { display: inline-flex; align-items: center; gap: 4px; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: 20px; padding: 4px 10px; font-size: 12px; color: var(--color-text-secondary); margin: 3px; }
+  .hashtag-count { font-size: 11px; color: var(--color-text-tertiary); }
+  .sentiment-bar { display: flex; height: 10px; border-radius: 5px; overflow: hidden; margin-bottom: 4px; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 1rem 0; }
+  .alert-box { background: #FAEEDA; border: 0.5px solid #EF9F27; border-radius: var(--border-radius-md); padding: 10px 14px; margin-bottom: 1rem; }
+  .alert-box p { font-size: 13px; color: #633806; margin: 0; line-height: 1.5; }
+  .alert-box strong { font-weight: 500; }
+</style>
+
+<div class="dash">
+
+  <div class="alert-box">
+    <p><strong>Focus: 18–24 demographic reach.</strong> This report tracks online discussion of antisemitism from Mar 30 – Apr 13, 2026. The dominant platforms — TikTok, Bluesky, and X — are primary channels for young adult audiences, making this data particularly relevant to the 18–24 cohort.</p>
+  </div>
+
+  <p class="section-label">Overall scale (Mar 30 – Apr 13, 2026)</p>
+  <div class="metric-grid">
+    <div class="metric">
+      <p class="metric-val">17K</p>
+      <p class="metric-lbl">Total mentions</p>
+      <p class="metric-sub">-5% vs prior period</p>
+    </div>
+    <div class="metric">
+      <p class="metric-val">75M</p>
+      <p class="metric-lbl">Total reach</p>
+      <p class="metric-sub">-23% vs prior period</p>
+    </div>
+    <div class="metric">
+      <p class="metric-val">28%</p>
+      <p class="metric-lbl">Negative sentiment</p>
+      <p class="metric-sub">4,744 mentions</p>
+    </div>
+    <div class="metric">
+      <p class="metric-val">7%</p>
+      <p class="metric-lbl">Positive sentiment</p>
+      <p class="metric-sub">1,198 mentions</p>
+    </div>
+    <div class="metric">
+      <p class="metric-val">$7.1M</p>
+      <p class="metric-lbl">AVE (media value)</p>
+      <p class="metric-sub">-29% vs prior period</p>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <p class="card-title">Platform mentions — 18–24 relevance</p>
+      <div class="platform-bar">
+        <span class="platform-name">TikTok</span>
+        <div class="bar-track"><div class="bar-fill" style="width:100%; background:#E24B4A;"></div></div>
+        <span class="bar-val">3,035</span>
+      </div>
+      <div class="platform-bar">
+        <span class="platform-name">Bluesky</span>
+        <div class="bar-track"><div class="bar-fill" style="width:89%; background:#378ADD;"></div></div>
+        <span class="bar-val">2,709</span>
+      </div>
+      <div class="platform-bar">
+        <span class="platform-name">X (Twitter)</span>
+        <div class="bar-track"><div class="bar-fill" style="width:49%; background:#888780;"></div></div>
+        <span class="bar-val">1,501</span>
+      </div>
+      <div class="platform-bar">
+        <span class="platform-name">Reddit</span>
+        <div class="bar-track"><div class="bar-fill" style="width:16%; background:#BA7517;"></div></div>
+        <span class="bar-val">496</span>
+      </div>
+      <div class="platform-bar">
+        <span class="platform-name">YouTube</span>
+        <div class="bar-track"><div class="bar-fill" style="width:3%; background:#639922;"></div></div>
+        <span class="bar-val">97</span>
+      </div>
+      <div class="platform-bar">
+        <span class="platform-name">Twitch</span>
+        <div class="bar-track"><div class="bar-fill" style="width:4%; background:#534AB7;"></div></div>
+        <span class="bar-val">118</span>
+      </div>
+      <div class="platform-bar">
+        <span class="platform-name">Telegram</span>
+        <div class="bar-track"><div class="bar-fill" style="width:3%; background:#0F6E56;"></div></div>
+        <span class="bar-val">82</span>
+      </div>
+      <p style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 10px;">TikTok, Bluesky, and X together = 7,245 mentions. All are top-indexed for 18–24 users.</p>
+    </div>
+
+    <div class="card">
+      <p class="card-title">Sentiment by platform</p>
+      <div style="margin-bottom: 10px;">
+        <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px;">TikTok <span style="color: var(--color-text-tertiary); font-size: 11px;">3,035 total</span></div>
+        <div class="sentiment-bar">
+          <div style="width:29%; background:#639922;"></div>
+          <div style="width:20%; background:#E24B4A;"></div>
+          <div style="width:51%; background:#D3D1C7;"></div>
+        </div>
+        <div style="font-size: 11px; color: var(--color-text-tertiary);">29% positive · 20% negative · 51% neutral</div>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px;">X (Twitter) <span style="color: var(--color-text-tertiary); font-size: 11px;">1,501 total</span></div>
+        <div class="sentiment-bar">
+          <div style="width:3%; background:#639922;"></div>
+          <div style="width:77%; background:#E24B4A;"></div>
+          <div style="width:20%; background:#D3D1C7;"></div>
+        </div>
+        <div style="font-size: 11px; color: var(--color-text-tertiary);">3% positive · 77% negative · 20% neutral</div>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px;">News <span style="color: var(--color-text-tertiary); font-size: 11px;">7,642 total</span></div>
+        <div class="sentiment-bar">
+          <div style="width:1%; background:#639922;"></div>
+          <div style="width:12%; background:#E24B4A;"></div>
+          <div style="width:87%; background:#D3D1C7;"></div>
+        </div>
+        <div style="font-size: 11px; color: var(--color-text-tertiary);">1% positive · 12% negative · 87% neutral</div>
+      </div>
+      <div style="margin-bottom: 10px;">
+        <div style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px;">Other socials <span style="color: var(--color-text-tertiary); font-size: 11px;">3,401 total</span></div>
+        <div class="sentiment-bar">
+          <div style="width:5%; background:#639922;"></div>
+          <div style="width:51%; background:#E24B4A;"></div>
+          <div style="width:44%; background:#D3D1C7;"></div>
+        </div>
+        <div style="font-size: 11px; color: var(--color-text-tertiary);">5% positive · 51% negative · 44% neutral</div>
+      </div>
+      <div style="display: flex; gap: 12px; margin-top: 10px; font-size: 11px;">
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:8px;height:8px;border-radius:50%;background:#639922;display:inline-block;"></span> Positive</span>
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:8px;height:8px;border-radius:50%;background:#E24B4A;display:inline-block;"></span> Negative</span>
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:8px;height:8px;border-radius:50%;background:#D3D1C7;display:inline-block;"></span> Neutral</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Trending hashtags — topic association map</p>
+    <div style="margin-bottom: 10px;">
+      <span style="font-size: 12px; color: var(--color-text-secondary);">Geopolitical framing (dominant)</span><br>
+      <div style="margin-top: 6px;">
+        <span class="hashtag-chip" style="background:#FCEBEB; border-color:#F09595;">#freepalestine <span class="hashtag-count">2,946</span></span>
+        <span class="hashtag-chip" style="background:#FCEBEB; border-color:#F09595;">#palestine <span class="hashtag-count">596</span></span>
+        <span class="hashtag-chip" style="background:#FCEBEB; border-color:#F09595;">#gaza <span class="hashtag-count">558</span></span>
+        <span class="hashtag-chip" style="background:#FCEBEB; border-color:#F09595;">#savepalestine <span class="hashtag-count">357</span></span>
+        <span class="hashtag-chip" style="background:#FCEBEB; border-color:#F09595;">#israel <span class="hashtag-count">366</span></span>
+        <span class="hashtag-chip" style="background:#FCEBEB; border-color:#F09595;">#iran <span class="hashtag-count">388</span></span>
+      </div>
+    </div>
+    <div>
+      <span style="font-size: 12px; color: var(--color-text-secondary);">Viral amplification (algorithmic reach)</span><br>
+      <div style="margin-top: 6px;">
+        <span class="hashtag-chip" style="background:#E6F1FB; border-color:#85B7EB;">#viral <span class="hashtag-count">477</span></span>
+        <span class="hashtag-chip" style="background:#E6F1FB; border-color:#85B7EB;">#fyp <span class="hashtag-count">458</span></span>
+      </div>
+    </div>
+    <p style="font-size: 12px; color: var(--color-text-tertiary); margin-top: 10px; line-height: 1.5;">Key insight: #viral (477) and #fyp (458) are TikTok "For You Page" tags — they are explicitly used to drive algorithmic distribution to undirected audiences including 18–24 year olds who never searched for this content.</p>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <p class="card-title">Top influencers by reach</p>
+      <div style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 0.5px solid var(--color-border-tertiary);">
+        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">zoya_gul_234</div>
+        <div style="font-size: 12px; color: var(--color-text-secondary);">TikTok · 29,722 followers</div>
+        <div style="font-size: 12px; color: var(--color-text-tertiary);">Reach: 4.2M · 16.8% share of voice</div>
+        <div style="margin-top: 4px;"><span class="badge badge-amber">#freepalestine</span><span class="badge badge-gray">#lebanon</span></div>
+      </div>
+      <div style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 0.5px solid var(--color-border-tertiary);">
+        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">ikhsnndsh10</div>
+        <div style="font-size: 12px; color: var(--color-text-secondary);">TikTok · 1,399 followers</div>
+        <div style="font-size: 12px; color: var(--color-text-tertiary);">Reach: 2.2M · 8.8% share of voice</div>
+        <div style="margin-top: 4px;"><span class="badge badge-amber">#freepalestine</span><span class="badge badge-gray">#islam</span></div>
+      </div>
+      <div style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 0.5px solid var(--color-border-tertiary);">
+        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">._af10x</div>
+        <div style="font-size: 12px; color: var(--color-text-secondary);">TikTok · 397 followers</div>
+        <div style="font-size: 12px; color: var(--color-text-tertiary);">Reach: 1.9M · 7.5% share of voice</div>
+        <div style="margin-top: 4px;"><span class="badge badge-teal">#palestine</span><span class="badge badge-gray">#fyp</span></div>
+      </div>
+      <div>
+        <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary);">logistic.girl</div>
+        <div style="font-size: 12px; color: var(--color-text-secondary);">TikTok · 15,896 followers</div>
+        <div style="font-size: 12px; color: var(--color-text-tertiary);">Reach: 1.3M · 5.3% share of voice</div>
+        <div style="margin-top: 4px;"><span class="badge badge-amber">#sumudflotila</span><span class="badge badge-gray">#freepalestine</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="card-title">Key findings for the 18–24 demographic</p>
+      <div class="insight-row">
+        <div class="insight-dot" style="background:#E24B4A;"></div>
+        <div class="insight-text"><strong style="font-weight:500;">TikTok is the primary vector.</strong> 3,035 mentions with a heavily positive sentiment ratio (29% positive vs 20% negative) — content is framed sympathetically, not as overt hate, making it less likely to trigger moderation or viewer skepticism.</div>
+      </div>
+      <div class="insight-row">
+        <div class="insight-dot" style="background:#BA7517;"></div>
+        <div class="insight-text"><strong style="font-weight:500;">Micro-accounts, macro-reach.</strong> Account ._af10x has only 397 followers yet achieved 1.9M reach. This is the hallmark of algorithmic amplification — small accounts using #fyp and #viral to reach enormous undirected audiences.</div>
+      </div>
+      <div class="insight-row">
+        <div class="insight-dot" style="background:#378ADD;"></div>
+        <div class="insight-text"><strong style="font-weight:500;">Geopolitical framing as entry point.</strong> Hashtags like #freepalestine (2,946), #gaza, and #iran are used as the entry framing, meaning users discover content through political solidarity channels — not explicit searches for antisemitic content.</div>
+      </div>
+      <div class="insight-row">
+        <div class="insight-dot" style="background:#534AB7;"></div>
+        <div class="insight-text"><strong style="font-weight:500;">Institutional amplifiers present.</strong> CNN and Sky News TikTok accounts appear in the influencer table, lending mainstream legitimacy to adjacent content in the same discovery feed.</div>
+      </div>
+      <div class="insight-row">
+        <div class="insight-dot" style="background:#0F6E56;"></div>
+        <div class="insight-text"><strong style="font-weight:500;">X has the sharpest negative skew.</strong> 77% of X (Twitter) mentions are negative — this platform functions more as a reactive/critical space, while TikTok functions as a sympathetic one. Different platforms, different emotional register for the same underlying content.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">How content reaches the 18–24 cohort — pathway analysis</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px;">
+      <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px;">
+        <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">Step 1 — Entry via solidarity</div>
+        <div style="font-size: 12px; color: var(--color-text-secondary);">User engages with #freepalestine or #gaza content — framed as humanitarian or political solidarity, not ideological.</div>
+      </div>
+      <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px;">
+        <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">Step 2 — Algorithmic pull</div>
+        <div style="font-size: 12px; color: var(--color-text-secondary);">TikTok/Bluesky algorithms serve adjacent content. #fyp and #viral tags are embedded to maximize this distribution to undirected viewers.</div>
+      </div>
+      <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px;">
+        <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">Step 3 — Normalization loop</div>
+        <div style="font-size: 12px; color: var(--color-text-secondary);">Consistent exposure (17K mentions / 2 weeks, 75M reach) normalizes the framing. TikTok's positive sentiment ratio (29%) suggests the content is not perceived as hostile.</div>
+      </div>
+      <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px;">
+        <div style="font-size: 12px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px;">Step 4 — Cross-platform spread</div>
+        <div style="font-size: 12px; color: var(--color-text-secondary);">Content migrates to Bluesky (2,709), Reddit (496), and Telegram (82) — including more closed/ideological spaces. Telegram links suggest some content flows into encrypted/private channels.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="border-color: #F09595;">
+    <p class="card-title">Critical data limitations for this analysis</p>
+    <div class="insight-row">
+      <div class="insight-dot" style="background:#888780;"></div>
+      <div class="insight-text">Brand24 does not provide direct age demographic segmentation. The 18–24 inference is based on platform demographics (TikTok's user base skews heavily 18–29) and account characteristics of top influencers, not direct age data.</div>
+    </div>
+    <div class="insight-row">
+      <div class="insight-dot" style="background:#888780;"></div>
+      <div class="insight-text">The dataset tracks the keyword "antisemitism" — content that promotes antisemitism without using the term itself (e.g. coded language, dog-whistles) would not appear in this data. True exposure is likely higher.</div>
+    </div>
+    <div class="insight-row">
+      <div class="insight-dot" style="background:#888780;"></div>
+      <div class="insight-text">Instagram and Facebook show 0 mentions — this is almost certainly a data access limitation (Meta API restrictions), not true zero presence.</div>
+    </div>
+  </div>
+
+</div>
