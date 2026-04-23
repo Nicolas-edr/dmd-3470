@@ -83,7 +83,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
 .poppins-thin {
   font-family: "Poppins", sans-serif;
   font-weight: 100;
@@ -192,28 +191,142 @@ textarea {
   font-style: italic;
 }
 
-.nav-bar {
-  background: linear-gradient(45deg, #B23ED8, #9065E8, #7584F5);
+.head-gradient {
+ background: linear-gradient(45deg, #BD32D3, #9361E7, #7089F7);
+ width: 100%;
+ height: 100vh;
 }
 
-.navbar-nav .nav-link {
+.nav-menu { 
+  padding: 45px 20px;
+}
+
+.navbar-logo {
+  flex-shrink: 0;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-sections {
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    list-style: none;
+    padding: 0, 0, 0 16px;
+    gap:45px;
+    margin: 0;
+  }
+
+.nav-sections li {
+    display: inline-block;
+    color:#fff;
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: normal;
+    padding:8px;
+}
+
+
+@media (max-width: 1024px) {
+  header {
+    min-height: 610px;
+  }
+}
+
+.home-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.home-info .row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+
+.app-info {
+  margin: 0 30px 0 20px;
+  padding: 10px;
+}
+
+.app {
   color: #fff;
   font-size: 16px;
-  font-weight: 500;
-  font-family: "Poppins";
-  padding: 8px;
-  justify-content: flex-end;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
 }
 
+.title-tag { 
+  font-size: 60px;
+  color: #fff;
+  font-weight: 600;
+  font-family: "poppins", sans-serif;
+  line-height: 1.25em;
+  margin-bottom: 10px;
 
+}
 
+/* Header content styling */
+.app-info p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
 
+.app-info .btn {
+  background-color: #fff;
+  font-family: "poppins", sans-serif;
+  fill:#BD32D3;
+  color: #BD32D3;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  padding: 18px 25px;
+  transition: all 0.3s ease;
+  line-height: 1;
+  margin-right: 1.2rem;
+}
 
+.app-info .btn:hover {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
 
-
-
-
-
+#features {
+  background-color: #f5f5f5;
+  padding: 50px 0 0 0;
+}
 
 
 
@@ -306,6 +419,129 @@ textarea {
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
+}
+
+/* Mobile responsive navigation */
+@media only screen and (max-width: 767px) {
+  .hamburger-menu {
+    display: flex;
+
+  }
+
+  .nav-sections {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(45deg, #BD32D3, #9361E7, #7089F7);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 100px 30px 30px;
+    gap: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-sections.active {
+    right: 0;
+  }
+
+  .nav-sections li {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav-sections .nav-link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: color 0.3s ease;
+  }
+
+  .nav-sections .nav-link:hover,
+  .nav-sections .nav-link.active {
+    color: #FFE135;
+  }
+
+  /* Overlay when mobile menu is open */
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Hamburger animation */
+  .hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  /* Mobile header adjustments */
+  header {
+    min-height: calc(100vh - 60px); /* Smaller nav on mobile */
+  }
+
+  .title-tag {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+
+  .app-info p {
+    font-size: 16px;
+  }
+
+  .app-info .btn {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  /* Mobile phone image adjustments */
+  #phone {
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  /* Stack columns vertically on mobile */
+  .home-info .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-info .col-md-8,
+  .home-info .col-md-4 {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media print,
