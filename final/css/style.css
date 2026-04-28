@@ -356,13 +356,15 @@ textarea {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
+  padding: 0 20px;
 }
 
 .feature-card p {
-  font-size: 14px;
+  font-size: 16px;
   color: #6C8493;
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
+  padding: 0 20px;
 }
 
 .feature-card img {
@@ -371,8 +373,75 @@ textarea {
 }
 
 .feature-card:hover {
-  box-shadow: 0 8px 16px 0 #6f42c1;
+  box-shadow: 0 3px 0px 0 #BD32D3;
 }
+
+.img-layer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fg-image {
+  position: relative;
+  top: -60px;
+  z-index: 2;
+}
+
+#howitwork-bg {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-40%, -40%);
+  z-index: 1;
+}
+
+
+.how-it-work-list  {
+  list-style: none;
+  padding: 0;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.d-flex {
+  gap: 15px;
+  padding: 0 0 20px 0;
+  margin: 40px 0;
+}
+
+.d-flex h3 {
+  font-size: 24px;
+  color: #102465;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+.d-flex p {
+  font-size: 16px;
+  color: #6C8493;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+.flex-shrink-0 img {
+  width: 90px;
+  height: 90px;
+}
+
+.icon-imgs {
+  border: solid 1px #BD32D3;
+  padding:15px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.app-store {
+  margin-left:50px;
+}
+
 
 
 
@@ -463,9 +532,6 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
 
 /* Mobile responsive navigation */
 @media only screen and (max-width: 767px) {
@@ -587,6 +653,16 @@ textarea {
     flex: none;
     width: 100%;
     max-width: 100%;
+  }
+
+  .col-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  #features .row {
+    flex-direction: column;
+      align-items: center;
   }
 }
 
