@@ -9,9 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
     hamburgerMenu.classList.toggle('active');
     navSections.classList.toggle('active');
     navOverlay.classList.toggle('active');
-
-    // Prevent body scroll when menu is open
-    document.body.style.overflow = navSections.classList.contains('active') ? 'hidden' : '';
   }
 
   // Event listeners
@@ -30,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
       hamburgerMenu.classList.remove('active');
       navSections.classList.remove('active');
       navOverlay.classList.remove('active');
-      document.body.style.overflow = '';
     }
   });
 });

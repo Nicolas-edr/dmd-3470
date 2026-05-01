@@ -15,6 +15,7 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  scroll-behavior: smooth;
 }
 
 /*
@@ -195,14 +196,51 @@ textarea {
  background: linear-gradient(45deg, #BD32D3, #9361E7, #7089F7);
  width: 100%;
  height: 100vh;
+ position: relative;
+ overflow: hidden;
+}
+
+footer.head-gradient {
+  width: 100vw;
+  height: 500px;
+  max-width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-bg-container {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 50%;
+  height: calc(100% - 80px);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-bg-img {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
 }
 
 .nav-menu { 
   padding: 45px 20px;
+  position: relative;
+  z-index: 10;
 }
 
 .navbar-logo {
   flex-shrink: 0;
+  position: relative;
+  z-index: 10;
 }
 
 .hamburger-menu {
@@ -234,6 +272,8 @@ textarea {
     padding: 0, 0, 0 16px;
     gap:45px;
     margin: 0;
+    position: relative;
+    z-index: 10;
   }
 
 .nav-sections li {
@@ -254,12 +294,19 @@ textarea {
   width: 100%;
   flex: 1;
   padding: 2rem 0;
+  position: relative;
+  z-index: 10;
 }
 
 .home-info .row {
   display: flex;
   align-items: center;
   width: 100%;
+}
+
+header {
+  position: relative;
+  z-index: 10;
 }
 
 .app-info {
@@ -338,6 +385,19 @@ textarea {
   margin-bottom: 50px;
 }
 
+.manage .d-flex {
+  justify-content: center;
+}
+
+.manage .section-title {
+  text-align: left;
+  margin-top: 0;
+}
+
+.manage .section-description {
+  text-align: left;
+}
+
 .feature-card {
   background-color: #fff;
   border-radius: 10px;
@@ -381,20 +441,37 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 320px;
 }
 
 .fg-image {
   position: relative;
-  top: -60px;
   z-index: 2;
 }
 
 #howitwork-bg {
   position: absolute;
-  top: 40%;
-  left: 40%;
-  transform: translate(-40%, -40%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .img-layer {
+    min-height: auto;
+  }
+
+  .fg-image {
+    top: 0;
+  }
+
+  #howitwork-bg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 
@@ -441,6 +518,223 @@ textarea {
 .app-store {
   margin-left:50px;
 }
+
+.read-more-btn {
+ background-color: #BD32D3;
+  font-family: "poppins", sans-serif;
+  fill:#BD32D3;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  transition: all 0.3s ease;
+  line-height: 1;
+  margin-right: 1.2rem;
+  padding: 18px 40px;
+}
+
+.read-more-btn:hover {
+  background-color: #7089F7;
+  color: #fff;
+  border-color: #7089F7;
+}
+
+.watch-video-section {
+  background-image: url('../final-imgs/watch-tutorial-img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  overflow-x: hidden;
+}
+.watch-video-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(189, 50, 211, 0.5);
+  z-index: 1;
+}
+
+.watch-video {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}
+
+.watch-video h2 {
+  font-size: 42px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+}
+
+.play-btn {
+  background-color: #D9378B;
+  border-radius: 100px;
+  box-shadow: 0px 0px 0px 14px rgba(255, 255, 255, 0.1);
+  padding: 20px 26px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn i {
+  font-size: 35px;
+  color: #FFFFFF;
+}
+
+.card-titles h2 {
+  font-size: 18px;
+  color: #BD32D3;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin: 15px 0;
+}
+
+.card-titles h3 {
+  font-size: 24px;
+  color: #102465;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  margin: 15px 0;
+}
+
+.card-titles p {
+  font-size: 14px;
+  color: #6C8493;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 35px;
+}
+
+.card-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-info li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.featured {
+  align-items: center;
+  text-align: left;
+  color:#102465;
+}
+
+.no-featured {
+  align-items: center;
+  text-align: left;
+  color: #6C8493;
+}
+
+.feature-card-plan {
+  background-color: #fff;
+  border-radius: 20px;
+  padding:40px 20px 40px 20px;
+  text-align: center;
+  box-shadow:0px 6px 21.4px 2.6px rgba(0, 0, 0, 0.05);
+  margin: 0px 5px 0px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 -8px 0px 0 #BD32D3;
+}
+
+.card-btn {
+  margin-top:15px;
+ background-color: #fff;
+  font-family: "poppins", sans-serif;
+  fill:#BD32D3;
+  color: #BD32D3;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #BD32D3;
+  transition: all 0.3s ease;
+  line-height: 1;
+  margin-right: 1.2rem;
+  padding: 18px 40px;
+}
+
+.card-btn:hover {
+  background-color: #BD32D3;
+  color: #fff;
+  border-color: #BD32D3;
+}
+
+.review-card {
+  border-radius: 20px 20px 20px 20px;
+  padding: 0px 30px 10px 30px;
+  border: 1px solid #BD32D3;
+  box-shadow: 0px 6px 7.4px 0.6px rgba(0, 0, 0, 0.06);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  text-align: center;
+  margin: 0 10px;
+  margin-top:40px;
+}
+
+.review-card .reviewer {
+  margin-top: -47px;
+  margin-bottom:30px;
+}
+
+.review-note {
+  font-size: 16px;
+  color: #102465;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 16px;
+}
+
+footer h2 {
+  font-size: 50px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top:50px;
+}
+
+footer p {
+  font-size: 16px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  margin:40px 100px 0;
+}
+
+.foot-imgs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px 0;
+}
+
 
 
 
@@ -620,6 +914,10 @@ textarea {
     min-height: calc(100vh - 60px); /* Smaller nav on mobile */
   }
 
+  .hero-bg-container {
+    width: 50%;
+  }
+
   .title-tag {
     font-size: 28px;
     line-height: 1.4;
@@ -663,6 +961,89 @@ textarea {
   #features .row {
     flex-direction: column;
       align-items: center;
+  }
+
+  .manage .row {
+    flex-direction: column;
+  }
+
+  .manage .row .col-6 {
+    order: 2;
+  }
+
+  .manage .row .col-5 {
+    order: 1;
+  }
+
+  /* Mobile styles for howitwork section */
+  #howitwork .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #howitwork .col-6,
+  #howitwork .col-5 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Mobile styles for responsive section */
+  .responsive .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .responsive .col-6,
+  .responsive .col-5 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Mobile styles for pricing section */
+  .pricing .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing .col-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Mobile styles for review section */
+  .review .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review .col-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Mobile styles for watch-video-section */
+  .watch-video-section {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .watch-video h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* Ensure all sections have proper padding on mobile */
+  section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Fix any potential overflow issues */
+  .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 

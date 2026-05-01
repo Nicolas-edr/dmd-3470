@@ -18,6 +18,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 </head>
@@ -55,6 +57,14 @@
 <!-- Mobile nav overlay -->
 <div class="nav-overlay"></div>
 
+<!-- Hero Background Images -->
+<div class="hero-bg-container">
+  <picture>
+    <source media="(max-width: 767px)" srcset="final-imgs/hero-bg-105x300.png">
+    <img src="final-imgs/hero-bg.png" alt="hero background" class="hero-bg-img">
+  </picture>
+</div>
+
     <header>
       <div class="home-info">
         <div class="container">
@@ -84,7 +94,7 @@
     </header>
     </div>
 
-    <section id="features" style="padding:60px 10px 10px 10px;">
+    <section id="features" style="padding:60px 10px 0 10px;">
       <div class="container">
         <div class="row">
           <div class="col-8 offset-2">
@@ -188,7 +198,7 @@
           <div class="col-5 offset-1">
             <div class="img-layer">
             <picture class="fg-image">
-              <source media="(max-width: 767px)" srcset="final-imgs/app-work-img-2-149x300p.png">
+              <source media="(max-width: 767px)" srcset="final-imgs/app-work-img-2-149x300.png">
               <img src="final-imgs/app-work-img-2.png" class="img-fluid" alt="how it work">
             </picture>
               <img src="final-imgs/app-work-bg.png" class="img-fluid" alt="how it work bg" id="howitwork-bg">
@@ -200,7 +210,193 @@
       </div>
     </section>
 
-    
+    <section class="manage" style="padding:60px 10px 10px 10px;">
+        <div class="container">
+        <div class="row">
+          <div class="col-6" style="margin-top:25px;">
+            <div class="img-layer">
+            <picture class="fg-image">
+              <source media="(max-width: 767px)" srcset="final-imgs/easy-to-manage-img-2-149x300.png">
+              <img src="final-imgs/easy-to-manage-img-2.png" class="img-fluid" alt="easy to manage">
+            </picture>
+              <img src="final-imgs/app-work-bg.png" class="img-fluid" alt="how it work bg" id="howitwork-bg">
+            </div>
+            
+          </div>
+
+          <div class="col-5 offset-right-1" style="margin-top:95px;">
+            <img src="final-imgs/easy-to-manage-icon.png" class="img-fluid" alt="manage" style="margin-bottom:10px;">
+            <div class="d-flex" style="flex-direction: column; align-items: flex-start; align-content: center;">
+              <h2 class="section-title">Easy to Manage Your All Data by This App</h2>
+              <p class="section-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+    </section>
+
+    <section class="responsive">
+        <div class="container">
+        <div class="row">
+          <div class="col-6" style="margin-top:95px; padding-left:15px;">
+            <div class="d-flex" style="flex-direction: column; align-items: flex-start; align-content: center;">
+              <h2 class="section-title" style="text-align: left;">Responsive Design for All Devices with Quality</h2>
+              <p class="section-description" style="text-align: left;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <button class="read-more-btn">Read More</button>
+            </div>
+          </div>
+          <div class="col-5 offset-1" style="margin-top:25px;">
+            <div class="img-layer">
+            <picture class="fg-image">
+              <source media="(max-width: 767px)" srcset="final-imgs/responsive-design-img-2-149x300.png">
+              <img src="final-imgs/responsive-design-img-2.png" class="img-fluid" alt="responsive">
+            </picture>
+              <img src="final-imgs/app-work-bg.png" class="img-fluid" alt="how it work bg" id="howitwork-bg">
+            </div>
+            
+          </div>
+
+    </section>
+
+    <section class="watch-video-section" style="margin-top:60px">
+      <div class="watch-video" style="margin-bottom:20px;">
+        <h2>Watch a Quick Tutorial</h2>
+        <div class="button">
+          <button class="play-btn">
+            <a href="https://www.youtube.com/watch?v=itYW-9td0RQ" target="_blank" class="watch-now-link">
+              <span class="play-icon"> <i class="fa-solid fa-play"></i> </span>
+            </a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing" style="padding:60px 10px 10px 10px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 offset-2">
+              <h2 class="section-title" style="margin-bottom: 60px;">Choose Your Plan</h2>
+          </div>
+        </div>
+
+       <div class="row">
+            <div class="col-4">
+            <div class="feature-card-plan">
+              <div class="card-titles">
+
+              <h2>STARTER</h2>
+              <h3>FREE</h3>
+              <p>Per Month, Billed Annually</p>
+              </div>
+              <div class="card-info">
+                <ul>
+                  <li class="featured"><i class="fa-solid fa-check"></i> Access Free Courses</li>
+                  <li class="featured"><i class="fa-solid fa-check"></i> Download Up To 5 Courses</li>
+                  <li class="no-featured""><i class="fa-solid fa-check"></i> Get Teacher's Feedback</li>
+                  <li class="no-featured"><i class="fa-solid fa-check"></i> Write Reviews</li>
+                  <li class="no-featured"><i class="fa-solid fa-check"></i> 24/7 Customer Support</li>
+                </ul>
+              </div>
+              
+                <button class="card-btn">Start Now</button>
+             
+            </div>
+          </div>
+
+         <div class="col-4">
+            <div class="feature-card-plan">
+              <div class="card-titles">
+
+              <h2>PREMIUM</h2>
+              <h3>$2.00</h3>
+              <p>Per Month, Billed Annually</p>
+              </div>
+              <div class="card-info">
+                <ul>
+                  <li class="featured"><i class="fa-solid fa-check"></i> Access Free Courses</li>
+                  <li class="featured"><i class="fa-solid fa-check"></i> Download Up To 5 Courses</li>
+                  <li class="featured"><i class="fa-solid fa-check"></i> Get Teacher's Feedback</li>
+                  <li class="no-featured"><i class="fa-solid fa-check"></i> Write Reviews</li>
+                  <li class="no-featured"><i class="fa-solid fa-check"></i> 24/7 Customer Support</li>
+                </ul>
+              </div>
+              
+                <button class="card-btn">Start Now</button>
+              
+            </div>
+          </div>
+
+         <div class="col-4">
+            <div class="feature-card-plan">
+              <div class="card-titles">
+
+              <h2>PRO</h2>
+              <h3>$7.00</h3>
+              <p>Per Month, Billed Annually</p>
+              </div>
+              <div class="card-info">
+                <ul>
+                  <li class="featured"><i class="fa-solid fa-check"></i> Access Free Courses</li>
+                  <li class="featured"><i class="fa-solid fa-check"></i> Download Up To 5 Courses</li>
+                  <li class="featured"><i class="fa-solid fa-check"></i> Get Teacher's Feedback</li>
+                  <li class="featured"><i class="fa-solid fa-check"></i> Write Reviews</li>
+                  <li class="featured"><i class="fa-solid fa-check"></i> 24/7 Customer Support</li>
+                </ul>
+              </div>
+             
+                <button class="card-btn">Start Now</button>
+              
+            </div>
+          </div>
+            
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section class="review" id="review" style="padding:60px 10px 10px 10px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 offset-2">
+              <h2 class="section-title" style="margin-bottom: 60px;">User Review</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-8 offset-2">
+            <div class="review-card">
+
+              <div class="reviewer">
+              <img src="final-imgs/review-img.png" class="img-fluid" alt="user1">
+              </div>
+
+              <div class="review-note">
+              <div class="placed-review">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra.</p>
+              </div>
+              <p>– Michel Strac</p>
+              </div>
+            </div>
+
+    </section>
+
+    <footer class="head-gradient" style="margin-top:100px;">
+
+          <div class="col-8 offset-2">
+      <h2>Let's start using today</h2>
+      <div class="foot-imgs">
+        <img src="final-imgs/app-store-img-footer.png"  class="img-fluid" alt="app store" style="margin-top: 20px; margin-right:20px;">
+        <img src="final-imgs/google-play-img-footer.png" class="img-fluid" alt="google play" style="margin-top: 20px;">
+      </div>
+      <p> Copyright &copy; 22020 Artbees Ltd. JupiterX Lite WordPress Theme Demo.
+        All rights reserved.
+      </p>
+      
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+
 
 
 
